@@ -14,9 +14,9 @@
 
 .hero {
     background-image: linear-gradient(to bottom,
-     rgba(0,0,0,0.10),
-    rgba(0,0,0,0.72)),
-    url(../assets/cafe.jpg);
+            rgba(0, 0, 0, 0.10),
+            rgba(0, 0, 0, 0.72)),
+        url(../assets/cafe.jpg);
     background-size: cover;
     background-position: center;
     min-height: 480px;
@@ -32,12 +32,18 @@
     padding: 12px 28px;
     text-decoration: none;
     border-radius: 12px;
+    margin-top: 16px;
+    transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.btn-reservar:hover {
+    transform: translateY(-3px);
+    opacity: 0.95;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-reservar:active {
+    transform: scale(0.98);
 }
 
 body {
@@ -50,6 +56,7 @@ body {
 
 .cards-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 40px 20px;
@@ -63,17 +70,17 @@ body {
     border-radius: 16px;
     padding: 24px;
     text-align: center;
-    
+
     /* Flexbox interno para organizar el contenido */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    
+
     flex: 1;
     max-width: 350px;
-    
+
     /* Sombra suave para darle elevación */
     box-shadow: 0 10px 20px rgba(0, 65, 151, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -86,7 +93,8 @@ body {
 }
 
 .card-image {
-    font-size: 2rem; /* Tamaño de los iconos/emojis */
+    font-size: 2rem;
+    /* Tamaño de los iconos/emojis */
 }
 
 .product-name {
@@ -94,6 +102,7 @@ body {
     font-weight: bold;
 }
 
+.product-desc,
 .product-description {
     font-size: 0.95rem;
     line-height: 1.4;
@@ -103,7 +112,8 @@ body {
 .product-price {
     font-size: 1.3rem;
     font-weight: bold;
-    margin-top: auto; /* Empuja el precio al fondo si falta espacio */
+    margin-top: auto;
+    /* Empuja el precio al fondo si falta espacio */
 }
 
 .btn-comprar {
@@ -115,7 +125,7 @@ body {
     font-weight: bold;
     border: none;
     cursor: pointer;
-    
+
     /* La transición va aquí para aplicarse en entrada y salida */
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
