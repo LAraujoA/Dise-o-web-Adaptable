@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.encabezado{
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    background-color: green;
+    grid-column: 1/13;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    grid-column: span 4;
+    background-color: azure;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid rgb(64, 220, 108);
+    gap: 8px;
+    
+}
+
+.imagen{
+    width: 200px;
+    height: 200px;
+}
+
+.pie{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 15px;
+    background-color: green;
+    grid-column: 1/13;
+    text-align: center;
+}
+
+.btn{
+    background-color: rgb(76, 231, 41);
+    color: black;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+}

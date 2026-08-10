@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primario: #004197;
+    --color-acento: #f0f8ff;
+    --color-texto: #ffffff;
+    --color-fondo: #e7f5ff;
+    --color-hover: #5ca3ff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.product-card {
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    
+    /* Flexbox interno para organizar el contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    
+    flex: 1;
+    max-width: 350px;
+    
+    /* Sombra suave para darle elevación */
+    box-shadow: 0 10px 20px rgba(0, 65, 151, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover suave en la tarjeta */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 65, 151, 0.25);
+}
+
+.card-image {
+    font-size: 2rem; /* Tamaño de los iconos/emojis */
+}
+
+.product-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: auto; /* Empuja el precio al fondo si falta espacio */
+}
+
+.btn-comprar {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background-color: var(--color-acento);
+    color: var(--color-primario);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    
+    /* La transición va aquí para aplicarse en entrada y salida */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-comprar:hover {
+    background-color: var(--color-hover);
+    color: #ffffff;
+}
+
+.btn-comprar:active {
+    transform: scale(0.98);
+}
